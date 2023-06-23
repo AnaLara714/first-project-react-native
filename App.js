@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
+import { Container, Content, H1, Header } from 'native-base';
 import PrdoductList from './ProductList';
 
 function formatName(user) {
@@ -12,22 +12,13 @@ export default function App() {
     lastName: "Mesquita"
   }
   return (
-    <View style={styles.container}>
-      <Text style={styles.textStyle}>Hello, {formatName(user)}</Text>
-      <StatusBar style="auto" />
-      <PrdoductList/>
-    </View>
+    <Container>
+      <Header/>
+      <Content>
+        <H1>Hello, </H1>
+        <Text>{formatName(user)}</Text>
+        <PrdoductList/>
+      </Content>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  textStyle: {
-    fontSize: 50,
-  }
-});
