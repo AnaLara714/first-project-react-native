@@ -1,17 +1,17 @@
-import { Button, Container, Content, H1, Header } from 'native-base';
-import Rating from './Rating';
+import { Body, Container, Content, H1, Header, Title } from 'native-base';
+import ProductList from './ProductList';
 
 export default function App() {
   
   return (
     <Container>
-      <Header/>
+      <Header>
+       <Body>
+        <Title>List of products</Title>
+       </Body>
+      </Header>
       <Content>
-       <Rating rating="1"/>
-       <Rating rating="2"/>
-       <Rating rating="3"/>
-       <Rating rating="4"/>
-       <Rating rating="5"/>
+       <ProductList/>
       </Content>
     </Container>
   );
