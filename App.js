@@ -1,23 +1,17 @@
-import { StyleSheet, Text } from 'react-native';
-import { Container, Content, H1, Header } from 'native-base';
-import PrdoductList from './ProductList';
-
-function formatName(user) {
-  return user.firstName + " " + user.lastName;
-}
+import { Button, Container, Content, H1, Header } from 'native-base';
+import Rating from './Rating';
 
 export default function App() {
-  const user = {
-    firstName: "Ana",
-    lastName: "Mesquita"
-  }
+  
   return (
     <Container>
       <Header/>
       <Content>
-        <H1>Hello, </H1>
-        <Text>{formatName(user)}</Text>
-        <PrdoductList/>
+       <Rating rating="1"/>
+       <Rating rating="2"/>
+       <Rating rating="3"/>
+       <Rating rating="4"/>
+       <Rating rating="5"/>
       </Content>
     </Container>
   );
