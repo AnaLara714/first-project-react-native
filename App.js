@@ -1,18 +1,10 @@
-import { Body, Container, Content, H1, Header, Title } from 'native-base';
-import ProductList from './ProductList';
+import { Container } from "native-base";
+import MyForm from "./MyForms";
 
 export default function App() {
-  
   return (
     <Container>
-      <Header>
-       <Body>
-        <Title>List of products</Title>
-       </Body>
-      </Header>
-      <Content>
-       <ProductList/>
-      </Content>
+      <MyForm />
     </Container>
   );
 }
